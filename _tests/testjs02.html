@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Teste 02</title>
+    <script>
+      let acesa = false;
+      let quebrada = false;
+      let cliques = 0;
+
+      function lampada() {
+
+        if (quebrada) {
+          return;
+        }
+
+        cliques++;
+
+        if (cliques >= 6) {
+          document.getElementById("luz").src = "_imagens/lampada-quebrada.jpg";
+          quebrada = true;
+          return
+        }
+
+        if (acesa === false) {
+          document.getElementById("luz").src = "_imagens/lampada-acesa.jpg";
+          acesa = true;
+        } else {
+          document.getElementById("luz").src = "_imagens/lampada-apagada.jpg";
+          acesa = false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Acenda a lâmpada</h1>
+    <img src="_imagens/lampada-apagada.jpg" id="luz" onclick="lampada()" />
+  </body>
+</html>

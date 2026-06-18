@@ -1,0 +1,267 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "font-logo";
+  src: url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,800;1,800&display=swap");
+
+  font-family: "font-read";
+  src: url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,800;1,800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+}
+
+/* Global formatting */
+
+body {
+  font-family: "font-read", sans-serif;
+  background-color: #dddddd;
+  color: rgba(0, 0, 0, 1);
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+div#interface {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  width: 1000px;
+  margin: -20px auto 20px auto;
+  padding: 15px;
+}
+
+/* Header formatting */
+
+header#header img#icon {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  position: relative;
+  height: 80pt;
+  left: 800px;
+  top: -55px;
+}
+
+header#header {
+  border-bottom: 1px #606060 solid;
+  height: 165px;
+  background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 90px;
+  padding-bottom: 0px;
+}
+
+header#header h1 {
+  font-family: "font-logo", monospace;
+  font-size: 30pt;
+  color: #606060;
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+header#header h2 {
+  font-family: "font-logo", monospace;
+  color: gray;
+  font-size: 15pt;
+  padding: 0px;
+  margin-top: 0px;
+}
+
+/* Menu Formatting */
+
+nav#menu {
+  display: block;
+}
+
+nav#menu ul {
+  text-transform: uppercase;
+  position: absolute;
+  top: -15px;
+  left: 520px;
+}
+
+nav#menu li {
+  display: inline-block;
+  background-color: #dddddd;
+  padding: 8px;
+  margin: 2px;
+}
+
+nav#menu li:hover {
+  background-color: #606060;
+  transition: 0.2s;
+}
+
+nav#menu a {
+  color: #606060;
+  text-decoration: none;
+}
+
+nav#menu a:hover {
+  color: white;
+  transition: 0.2s;
+}
+
+/* Photo Caption Formatting */
+
+figure.photo-caption {
+  position: relative;
+  border: 8px solid white;
+  box-shadow: 1px 1px 5px black;
+}
+
+figure.photo-caption img {
+  width: 100%;
+  height: 100%;
+}
+
+figure.photo-caption figcaption {
+  opacity: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  transition: opacity 0.2s;
+}
+
+figure.photo-caption figcaption h4 {
+  text-align: center;
+}
+
+figure.photo-caption:hover figcaption {
+  opacity: 1;
+}
+
+/* Principal Formatting */
+
+section p {
+  text-align: justify;
+  text-indent: 30px;
+}
+
+section#principal {
+  display: block;
+  width: 600px;
+  float: left;
+  border-right: 1px #606060 solid;
+  padding-right: 18px;
+}
+
+/* Article Formatting */
+
+article#principal-news h2 {
+  background-color: #dddddd;
+  color: #606060;
+  font-size: 20pt;
+  padding: 5px;
+}
+
+header#article-header h1 {
+  font-family: "font-logo", monospace;
+  font-size: 25pt;
+  text-align: center;
+  color: #606060;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+header#article-header h2 {
+  font-size: 12pt;
+  color: rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+header#article-header h3 {
+  font-size: 10pt;
+  color: rgba(0, 0, 0, 0.2);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.right {
+  text-align: right;
+}
+
+/* Table Formatting */
+
+table#tabelaspec {
+  border: 2px #606060 solid;
+  border-spacing: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table#tabelaspec td.ce {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #606060;
+  color: #dddddd;
+  text-align: center;
+  font-weight: bold;
+  padding: 0px 5px 5px 5px;
+}
+
+table#tabelaspec td.cd {
+  background-color: #cecece;
+  color: black;
+  text-align: left;
+  border: 1px #606060 solid;
+  padding: 5px;
+}
+
+table#tabelaspec caption {
+  color: #606060;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+table#tabelaspec caption span {
+  display: block;
+  float: right;
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 10pt;
+  margin-top: 4px;
+}
+
+/* Formatação Lateral */
+
+aside#lateral {
+  background-color: #dddddd;
+  display: block;
+  float: right;
+  width: 350px;
+  margin: 15px 5px 0px 0px;
+
+  padding: 8px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+aside#lateral h1 {
+  color: #606060;
+  font-family: "font-logo", monospace;
+  font-size: 25pt;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+aside#lateral h2 {
+  background-color: #606060;
+  color: #ffffff;
+  font-size: 12pt;
+  padding: 5px;
+}
+
+/* Formatação Rodapé */
+
+footer#rodape {
+  clear: both;
+  border-top: 1px #606060 solid;
+}
+
+footer#rodape p {
+  text-align: center;
+}
