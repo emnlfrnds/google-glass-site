@@ -68,7 +68,33 @@
           </p>
 
           <section id="content">
-            <img src="_imagens/glass-esquema-marcado.jpg" />
+            <img src="_imagens/glass-esquema-marcado.jpg" usemap="#my-map" />
+            <map name="my-map">
+              <area
+                shape="rect"
+                coords="185,210, 260,255"
+                href="google-glass.html#screen"
+                target="window"
+              />
+              <area
+                shape="circle"
+                coords="156,243, 10"
+                href="google-glass.html#camera"
+                target="window"
+              />
+              <area
+                shape="circle"
+                coords="75,50, 11"
+                href="google-glass.html#gadgets"
+                target="window"
+              />
+              <area
+                shape="poly"
+                coords="25,142, 82,220, 82,250, 25,165"
+                href="google-glass.html#sensors"
+                target="window"
+              />
+            </map>
             <iframe
               src="google-glass.html"
               name="window"
