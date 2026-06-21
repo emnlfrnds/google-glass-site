@@ -4,7 +4,8 @@ Thumbs.db
 
 # Editor
 .vscode/
-_interface
+_interface/
+_textos/
 
 # Arquivos temporários
 *.tmp
