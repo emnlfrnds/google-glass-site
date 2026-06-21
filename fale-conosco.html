@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="style/form.css" />
   </head>
   <script src="_javascript/funcoes.js"></script>
+  <script>
+    function calc_total() {
+      var qtd = parseInt(document.getElementById('fieldQuant').value);
+      tot = qtd * 1500;
+
+      document.getElementById('fieldPrice').value = tot;
+
+      if (document.getElementById('fieldPrice').value == NaN) {
+        document.getElementById('fieldPrice').value = 0
+      }
+    }
+  </script>
   <body>
     <div id="interface">
       <header id="header">
@@ -64,11 +76,172 @@
         </article>
       </section>
 
-      Identificação do Usuário Nome: Senha: E-mail: Sexo: - Masculino - Feminino
-      Data de Nascimento: Endereço do Usuário Logradouro: Número: Estado:
-      Cidade: Mensagem do Usuário Grau de Urgência: Mensagem: Quero um Google
-      Glass Gostaria de adquirir um Google Glass quando disponível Cor:
-      Quantidade: Preço Total: R$ [BOTÃO ENVIAR]
+      <form
+        method="post"
+        id="formContact"
+        action="mailto:contato@googleglass.com"
+        oninput="calc_total();"
+      >
+        <fieldset id="user">
+          <legend>User Identification</legend>
+          <p>
+            <label for="fieldName">Name:</label>
+            <input
+              type="text"
+              name="textName"
+              id="fieldName"
+              size="35"
+              maxlength="70"
+              placeholder="Full name"
+            />
+          </p>
+          <p>
+            <label for="fieldPin">Pin:</label>
+            <input
+              type="password"
+              name="textPin"
+              id="fieldPin"
+              size="8"
+              maxlength="8"
+              placeholder="8 digits"
+            />
+          </p>
+          <p>
+            <label for="fieldEmail">E-mail:</label>
+            <input
+              type="email"
+              name="textEmail"
+              id="fieldEmail"
+              size="35"
+              maxlength="70"
+              placeholder="google@glass.com"
+            />
+          </p>
+          <fieldset id="gender">
+            <legend>Gender:</legend>
+            <input type="radio" name="genderSwitch" id="fieldMan" />
+            <label for="fieldMan">Man</label><br />
+            <input type="radio" name="genderSwitch" id="fieldWoman" />
+            <label for="fieldWoman">Woman</label>
+          </fieldset>
+          <p>
+            <label for="fieldDB">Date of Birth</label>
+            <input type="date" name="dateBirth" id="fieldDB" />
+          </p>
+        </fieldset>
+        <fieldset id="address">
+          <legend>User Address</legend>
+          <p>
+            <label for="fieldPB">Public Place:</label>
+            <input
+              type="text"
+              name="publicPlace"
+              id="fieldPB"
+              size="35"
+              maxlength="70"
+              placeholder="street, avenue, square, alley, road"
+            />
+          </p>
+          <p>
+            <label for="fieldNumber">Number:</label>
+            <input
+              type="tel"
+              name="textNumber"
+              id="fieldNumber"
+              maxlength="5"
+              pattern="[0-9]*"
+              placeholder="Number"
+            />
+          </p>
+          <p>
+            <label for="fieldState">State:</label>
+            <select name="textState" id="fieldState">
+              <optgroup label="Northeast">
+                <option value="NYC" selected>New York</option>
+              </optgroup>
+              <optgroup label="West">
+                <option value="CA">California</option>
+              </optgroup>
+              <optgroup label="Southeast">
+                <option value="FL">Florida</option>
+              </optgroup>
+            </select>
+          </p>
+          <p>
+            <label for="fieldCity">City:</label>
+            <input
+              type="text"
+              name="textCity"
+              id="fieldCity"
+              size="15"
+              maxlength="35"
+              placeholder="ex: Los Angeles"
+              list="cities"
+            />
+          </p>
+          <datalist id="cities">
+            <option value="New York City"></option>
+            <option value="Albany"></option>
+            <option value="Los Angeles"></option>
+            <option value="San Francisco"></option>
+            <option value="Miami"></option>
+            <option value="Orlando"></option>
+          </datalist>
+        </fieldset>
+        <fieldset id="message">
+          <legend>User message</legend>
+          <p>
+            <label for="fieldUrg">Degree of urgency:</label> Min<input
+              type="range"
+              name="rangeUrg"
+              id="fieldUrg"
+              min="0"
+              max="10"
+              step="2"
+            />Max
+          </p>
+          <p>
+            <label for="fieldMsg">Message:</label>
+            <textarea
+              name="textArea"
+              id="fieldMsg"
+              cols="45"
+              rows="5"
+              placeholder="Write your message"
+            ></textarea>
+          </p>
+        </fieldset>
+        <fieldset id="order">
+          <legend>I Want Google Glass</legend>
+          <p>
+            <input type="checkbox" name="checkOrder" id="fieldOrder" checked />
+            <label for="fieldOrder">I would like to order a Google Glass when it becomes available</label>
+          </p>
+          <p>
+            <label for="fieldColor">Color:</label>
+              <input
+                type="color"
+                name="colorColor"
+                id="fieldColor"
+                value="#000000"/>
+          </p>
+          <p>
+            <label for="fieldQuant">Quantity:</label>
+              <input
+                type="number"
+                name="telQuant"
+                id="fieldQuant"
+                min="0"
+                max="5"
+                value="0"/>
+          </p>
+          <p>
+            <label for="fieldPrice">Total price: $</label>
+            <input type="text" name="textPrice" id="fieldPrice" placeholder="total payable" readonly>
+          </p>
+        </fieldset>
+        <input type="image" name="imageSubmit" src="_imagens/botao-enviar.png"/>
+      </form>
 
       <footer id="rodape">
         <p>
