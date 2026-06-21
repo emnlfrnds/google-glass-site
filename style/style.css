@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 @font-face {
   font-family: "font-logo";
   src: url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,800;1,800&display=swap");
@@ -37,7 +38,7 @@ div#interface {
 header#header img#icon {
   position: relative;
   left: 830px;
-  top: -25px;
+  top: -40px;
 }
 
 header#header {
@@ -72,14 +73,15 @@ nav#menu {
 nav#menu ul {
   text-transform: uppercase;
   position: absolute;
+  width: 500px;
   top: -20px;
-  left: 520px;
+  left: 550px;
 }
 
 nav#menu li {
   display: inline-block;
   background-color: #dddddd;
-  padding: 8px;
+  padding: 5px;
   margin: 2px;
 }
 
