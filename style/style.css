@@ -226,6 +226,19 @@ table#tabelaspec caption span {
   margin-top: 4px;
 }
 
+div#video1 video#oneday {
+  display: block;
+  position: relative;
+  bottom: 10px;
+  width: 100%;
+}
+
+div#video2 video#howfeels {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
 /* Formatação Lateral */
 
 aside#lateral {
